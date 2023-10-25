@@ -12,10 +12,10 @@ use Slim\Interfaces\RouteCollectorProxyInterface as Group;
 return function (App $app) {
 
     // get
-    $app->get('/customer', function (Request $request, Response $response) {
+    $app->get('/product', function (Request $request, Response $response) {
         $db = $this->get(PDO::class);
 
-        $query = $db->query('SELECT * FROM customer');
+        $query = $db->query('SELECT * FROM product');
         $results = $query->fetchAll(PDO::FETCH_ASSOC);
         $response->getBody()->write(json_encode($results));
 
