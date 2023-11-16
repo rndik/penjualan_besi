@@ -13,5 +13,11 @@ return function (App $app) {
     $productRoutes = require __DIR__.'/API/product.php';
     $productRoutes($app);
 
-    //Tabel
+    // //Tabel Transaksi
+    $productRoutes = require __DIR__.'/API/transaksi.php';
+    $productRoutes($app);
+    
+    // //Tabel Struk
+    $productRoutes = require __DIR__.'/API/struk.php';
+    $productRoutes($app);
 };
